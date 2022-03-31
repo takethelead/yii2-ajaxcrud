@@ -217,9 +217,9 @@ function ModalRemote(modalId) {
         if (response.forceReload !== undefined && response.forceReload) {
             if (response.forceReload == 'true') {
                 // Backwards compatible reload of fixed crud-datatable-pjax
-                $.pjax.reload({container: '#crud-datatable-pjax'});
+                $.pjax.reload({container: '#crud-datatable-pjax', history: false});
             } else {
-                $.pjax.reload({container: response.forceReload});
+                $.pjax.reload({container: response.forceReload, history: false});
             }
         }
 
